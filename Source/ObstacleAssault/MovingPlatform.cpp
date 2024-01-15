@@ -13,6 +13,8 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
+
+	StartLocation = GetActorLocation();
 }
 
 // Called every frame
@@ -29,6 +31,8 @@ void AMovingPlatform::Tick(float DeltaTime)
 	SetActorLocation(CurrentLocation);
 	// Send platform back if gone too far
 		// Check how far we've moved
+	float DistanceMoved = FVector::Dist(StartLocation, CurrentLocation);
 		// Reverse direction if gone too far
+	
 		
 }
